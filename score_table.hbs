@@ -1,0 +1,51 @@
+<style>
+  td, tr {
+    padding: 10px;
+  }
+  .destroyed {
+    background: #FF4040;
+  }
+  .deployed {
+    background: #A2CD5A;
+  }
+</style>
+
+<p>Activity between <strong>{{startTime}}</strong> and <strong>{{endTime}}</strong></p>
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan=8>Destroyed Resonators</th>
+    <th colspan=8>Deployed Resonators</th>
+  </tr>
+  <tr>
+    <th>Nick</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+  </tr>
+
+  {{#scores}}
+    <tr>
+      <td>{{nick}}</td>
+      {{#each destroyed}}
+      <td class="destroyed">{{this}}</td>
+      {{/each}}
+      {{#each deployed}}
+      <td class="deployed">{{this}}</td>
+      {{/each}}
+    </tr>
+  {{/scores}}
+</table>

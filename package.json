@@ -1,0 +1,17 @@
+{
+  "name": "es",
+  "version": "0.0.1",
+  "dependencies": {
+    "handlebars-runtime": "~1.0.0",
+    "hbsfy": "~0.1.1"
+  },
+  "devDependencies": {
+    "tape": "~0.0.4",
+    "browserify": "~2.33.1",
+    "uglify-js": "~2.4.0"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [ "ie8", "ie9", "ff/13", "chrome/20" ]
+  }
+}
